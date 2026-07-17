@@ -204,7 +204,7 @@ elif menu == "Contratos & Fornecedores":
             up_opcoes = [f"{r['codigo_up']} - {r['nomenclatura_up']}" for _, r in df_ups.iterrows()]
             up_selecionada = st.selectbox("Classificação Automática de UP Destino", up_opcoes)
             
-        submit_forn = st.form_submit_button("Salvar Registro Comercial")
+        submit_forn = st.form_submit_with_button("Salvar Registro Comercial")
         if submit_forn and item_selecionado != "Nenhum cadastrado":
             cod_item_clean = item_selecionado.split(" - ")[0]
             cod_up_clean = up_selecionada.split(" - ")[0]
